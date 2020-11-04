@@ -11,7 +11,8 @@ class AuthController extends Controller
         $this->auth_repo = $auth_repository;
     }
     public function signUp(AuthRequest $req){
-        dd($req);
+        
+        return response()->json(compact('body'));
     }
 
     public function login(){
@@ -19,10 +20,6 @@ class AuthController extends Controller
     }
 
     public function logout(){
-
-    }
-
-    public function user(){
 
     }
 }
