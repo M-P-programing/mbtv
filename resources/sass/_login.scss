@@ -1,0 +1,62 @@
+.login{
+  background-color: $main;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  h1{
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  .login-form{
+    background-color: rgba(33,40,44,0.3);
+    border-radius: 25px;
+    margin: 3em;
+    color: $white;
+    padding:0.5em;
+    display: flex;
+
+    .first{
+      width: 50%;
+      .field{
+        padding:1em;
+        label{
+          font-weight: 900;
+          font-size: 35px;
+        }
+        input{
+          width: 75%;
+          height: 40px;
+          font-size: 18px;
+        }
+      }
+  
+      button{
+        border:0px;
+        background: $third;
+        padding: 0.5em;
+        border-radius: 25px;
+        width: 75%;
+        margin: 0.6em;
+        color: $white;
+        font-size: 20px;
+        font-weight: 900;
+      }
+    }
+
+    .second{
+      width: 50%;
+      img{
+        width: 16em;
+        margin-right: 25px;
+        @include xl{
+        display: none;
+        }
+      }
+    }
+  }
+}

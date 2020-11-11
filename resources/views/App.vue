@@ -9,5 +9,7 @@
 </template>
 
 <script>
-export default {};
+import Navigation from '../js/components/Navigation.vue';
+export default {
+  components: { Navigation },};
 </script>
