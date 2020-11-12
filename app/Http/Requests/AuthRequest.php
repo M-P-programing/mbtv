@@ -75,7 +75,6 @@ class AuthRequest extends FormRequest
               'unique:users,email',
             ],
             'image'    => [
-              'required',
               'image',
             ],
             'password' => [

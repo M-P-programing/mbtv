@@ -12,6 +12,12 @@
     text-align: center;
     padding: 20px;
   }
+  .error-message{
+    background-color: $danger;
+    color: $white;
+    text-align: center;
+    padding: 30px;
+  }
   .login-form{
     background-color: rgba(33,40,44,0.3);
     border-radius: 25px;

@@ -28,15 +28,20 @@ class AuthController extends Controller
       /*  ***Store image in disk*** */
 
       $image           = $req->file('image');
-      $image_path_name = time() . $image->getClientOriginalName();
-      Storage::disk('users')->put($image_path_name, File::get($image));
+      if($image){
+        $image_path_name = time() . $image->getClientOriginalName();
+        Storage::disk('users')->put($image_path_name, File::get($image));
+      }else{
+        $image_path_name = null;
+      }
+     
 
       $data = [
         'name'     => $req->name,
         'surname'  => $req->surname,
         'email'    => $req->email,
         'password' => bcrypt($req->password),
-        'image'    => time() . $req->file('image')->getClientOriginalName(),
+        'image'    => $image_path_name,
       ];
 
       $query = $this->auth_repo->create($data);
@@ -67,7 +72,7 @@ class AuthController extends Controller
 
     if (!Auth::attempt($credentials)) {
       return response()->json([
-        'message' => 'Unauthorized',
+        'message' => 'Este usuario nao existe ou a password está incorrecta',
       ], 401);
     }
 

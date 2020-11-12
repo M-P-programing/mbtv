@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <h1 class="">Login</h1>
-    <div v-if="error">
+    <div v-if="error" class="error-message">
       <p>{{ error }}</p>
     </div>
     <form
@@ -59,7 +59,7 @@ export default {
           this.$router.push({ name: "home" });
         })
         .catch((error) => {
-          this.error = error.response.data;
+          this.error = error.response.data.message;
         });
     },
   },

@@ -15,7 +15,7 @@ const router = new VueRouter({
     linkActiveClass: 'is-active',
     routes: [
         {
-            path: '/login',
+            path: '/',
             name: 'login',
             component: Login,
         },
