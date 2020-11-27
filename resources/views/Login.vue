@@ -32,6 +32,10 @@
         <img src="../images/banner.jpeg" alt="">
       </div>
     </form>
+    <div class="register-link">
+      <p>Nao tens conta? <router-link to="/register">Registra-te</router-link></p>
+      
+    </div>
   </div>
 </template>
 <script>

@@ -1,13 +1,14 @@
 <template>
   <div class="register">
-    <h1>Register</h1>
-     <div v-if="error" class="error-message">
+    <h1>Registro</h1>
+    <div v-if="error" class="error-message">
       <p>{{ error }}</p>
     </div>
     <form
       autocomplete="off"
       @submit.prevent="register"
       method="post"
+      enctype="multipart/form-data"
       class="register-form"
     >
       <div class="first">
@@ -42,15 +43,6 @@
           <label for="password">Password</label><br />
           <input type="password" class="input" v-model="form.password" />
         </div>
-        <!-- <div>
-         <label for="file">Imagem</label>
-         <input 
-         type="file"
-         id="file"
-         ref="file"
-         v-on:change="handleFileUpload()"
-         >
-       </div> -->
         <button type="submit" class="">Accede</button>
       </div>
       <div class="second">
@@ -73,8 +65,7 @@ export default {
         name: null,
         surname: null,
         password: null,
-        error:null
-        //file: null
+        error: null,
       },
     };
   },
@@ -83,19 +74,13 @@ export default {
       axios
         .post("api/auth/signup", this.form)
         .then((response) => {
-           const status = 
-        JSON.parse(response.data.response.status);
-          console.log(status)
+          const status = JSON.parse(response.data.response.status);
           this.$router.push({ name: "/" });
         })
         .catch((error) => {
-           this.error = error.response.data.message;
+          this.error = error.response.data.message;
         });
     },
   },
-
-  // handleFileUpload(){
-  //   this.file = this.$refs.file.files[0];
-  // }
 };
 </script>

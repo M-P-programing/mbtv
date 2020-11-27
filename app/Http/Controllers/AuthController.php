@@ -33,8 +33,7 @@ class AuthController extends Controller
         Storage::disk('users')->put($image_path_name, File::get($image));
       }else{
         $image_path_name = null;
-      }
-     
+      }     
 
       $data = [
         'name'     => $req->name,

@@ -2019,6 +2019,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -2160,14 +2164,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2177,8 +2173,7 @@ __webpack_require__.r(__webpack_exports__);
         name: null,
         surname: null,
         password: null,
-        error: null //file: null
-
+        error: null
       }
     };
   },
@@ -2188,7 +2183,6 @@ __webpack_require__.r(__webpack_exports__);
 
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("api/auth/signup", this.form).then(function (response) {
         var status = JSON.parse(response.data.response.status);
-        console.log(status);
 
         _this.$router.push({
           name: "/"
@@ -2197,10 +2191,7 @@ __webpack_require__.r(__webpack_exports__);
         _this.error = error.response.data.message;
       });
     }
-  } // handleFileUpload(){
-  //   this.file = this.$refs.file.files[0];
-  // }
-
+  }
 });
 
 /***/ }),
@@ -38629,7 +38620,20 @@ var render = function() {
         _vm._v(" "),
         _vm._m(0)
       ]
-    )
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "register-link" }, [
+      _c(
+        "p",
+        [
+          _vm._v("Nao tens conta? "),
+          _c("router-link", { attrs: { to: "/register" } }, [
+            _vm._v("Registra-te")
+          ])
+        ],
+        1
+      )
+    ])
   ])
 }
 var staticRenderFns = [
@@ -38716,7 +38720,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "register" }, [
-    _c("h1", [_vm._v("Register")]),
+    _c("h1", [_vm._v("Registro")]),
     _vm._v(" "),
     _vm.error
       ? _c("div", { staticClass: "error-message" }, [
@@ -38728,7 +38732,11 @@ var render = function() {
       "form",
       {
         staticClass: "register-form",
-        attrs: { autocomplete: "off", method: "post" },
+        attrs: {
+          autocomplete: "off",
+          method: "post",
+          enctype: "multipart/form-data"
+        },
         on: {
           submit: function($event) {
             $event.preventDefault()
