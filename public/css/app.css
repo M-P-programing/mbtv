@@ -1,0 +1,247 @@
+@import url(https://fonts.googleapis.com/css2?family=Karla&display=swap);* {
+  font-family: "Karla", sans-serif;
+  margin: auto 0;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+h4 {
+  font-size: 1.6em;
+}
+
+h5 {
+  font-size: 1.4em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.login {
+  background-color: #181d20;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.login h1 {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.login .error-message {
+  background-color: #e50000;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+.login .login-form {
+  background-color: rgba(33, 40, 44, 0.3);
+  border-radius: 25px;
+  margin: 3em;
+  color: #fff;
+  padding: 0.5em;
+  display: flex;
+}
+
+.login .login-form .first {
+  width: 50%;
+}
+
+@media (max-width: 1400px) {
+  .login .login-form .first {
+    width: 100%;
+  }
+}
+
+.login .login-form .first .field {
+  padding: 1em;
+}
+
+.login .login-form .first .field label {
+  font-weight: 900;
+  font-size: 35px;
+}
+
+@media (max-width: 768px) {
+  .login .login-form .first .field label {
+    font-size: 15px;
+  }
+}
+
+.login .login-form .first .field input {
+  width: 75%;
+  height: 40px;
+  font-size: 18px;
+}
+
+@media (max-width: 1400px) {
+  .login .login-form .first .field input {
+    width: 100%;
+  }
+}
+
+.login .login-form .first button {
+  border: 0px;
+  background: #F3BD14;
+  padding: 0.5em;
+  border-radius: 25px;
+  width: 75%;
+  margin: 0.6em;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .login .login-form .first button {
+    width: 100%;
+  }
+}
+
+.login .login-form .second {
+  width: 50%;
+}
+
+@media (max-width: 1400px) {
+  .login .login-form .second {
+    display: none;
+  }
+}
+
+.login .login-form .second img {
+  width: 14em;
+  margin-right: 25px;
+}
+
+@media (max-width: 1400px) {
+  .login .login-form .second img {
+    display: none;
+  }
+}
+
+.login .register-link {
+  font-size: 20px;
+  text-align: center;
+}
+
+.login .register-link p {
+  color: #fff;
+}
+
+.register {
+  background-color: #181d20;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  min-height: 1000px;
+  width: 100%;
+  height: 100%;
+}
+
+.register h1 {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.register .error-message {
+  background-color: #e50000;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+.register .register-form {
+  background-color: rgba(33, 40, 44, 0.3);
+  border-radius: 25px;
+  margin: 3em;
+  color: #fff;
+  padding: 0.5em;
+  display: flex;
+}
+
+.register .register-form .first {
+  width: 50%;
+}
+
+@media (max-width: 1400px) {
+  .register .register-form .first {
+    width: 100%;
+  }
+}
+
+.register .register-form .first .field {
+  padding: 1em;
+}
+
+.register .register-form .first .field label {
+  font-weight: 900;
+  font-size: 35px;
+}
+
+.register .register-form .first .field input {
+  width: 75%;
+  height: 40px;
+  font-size: 18px;
+}
+
+@media (max-width: 1400px) {
+  .register .register-form .first .field input {
+    width: 100%;
+  }
+}
+
+.register .register-form .first button {
+  border: 0px;
+  background: #F3BD14;
+  padding: 0.5em;
+  border-radius: 25px;
+  width: 75%;
+  margin: 0.6em;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .register .register-form .first button {
+    width: 100%;
+  }
+}
+
+.register .register-form .second {
+  width: 50%;
+}
+
+@media (max-width: 1400px) {
+  .register .register-form .second {
+    display: none;
+  }
+}
+
+.register .register-form .second img {
+  width: 14em;
+  margin-right: 25px;
+}
+
