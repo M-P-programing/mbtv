@@ -170,8 +170,14 @@ p {
   color: #fff;
   width: 100%;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 95px;
   text-transform: uppercase;
+}
+
+@media (max-width: 1400px) {
+  .register .title {
+    margin-top: 25px;
+  }
 }
 
 .register .register-form {
