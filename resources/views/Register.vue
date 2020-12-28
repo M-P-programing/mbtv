@@ -1,6 +1,7 @@
 <template>
   <div class="register">
-    <h1>Registro</h1>
+    <div class="opacity"></div>
+    <div class="title"><h1>Registro</h1></div>
     <div v-if="error" class="error-message">
       <p>{{ error }}</p>
     </div>
@@ -43,12 +44,7 @@
           <label for="password">Password</label><br />
           <input type="password" class="input" v-model="form.password" />
         </div>
-        <button type="submit" class="">Accede</button>
-      </div>
-      <div class="second">
-        <img src="../images/banner.jpeg" alt="" />
-        <img src="../images/banner.jpeg" alt="" />
-        <img src="../images/banner.jpeg" alt="" />
+        <button type="submit" class="">Inscreve-te</button>
       </div>
     </form>
   </div>
